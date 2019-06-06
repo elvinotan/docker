@@ -124,20 +124,20 @@ misal nama imagenya adalah javadocker</br>
 Pada topik ini kita akan belajar bagaimana menghubungan suatu continer dengan container lainnya melalu port</br>
 a. Continer mogo, dengan open port 27017</br>
 b. Continer redis, dengan open port 6379</br>
-c. Continer java-docker. dengan open port 8080</br>
+c. Continer java-docker. dengan open port 8080</p>
 Apa yang salah dgn statement di bawah ini </br>
-<b>docker container create --name java-docker -p 8080:8080 -e NAME=Docker -e MONGO_HOST=localhost -e MONGO_PORT=27017 -e REDIS_HOST=localhost -e REDIS_PORT=6379 java-dockre:1.0</b>
+<b>docker container create --name java-docker -p 8080:8080 -e NAME=Docker -e MONGO_HOST=localhost -e MONGO_PORT=27017 -e REDIS_HOST=localhost -e REDIS_PORT=6379 java-dockre:1.0</b></br>
 java-docker mengarah mongo dan redis lewat host localhost, ingat ini berupa container loh, definisi localhost bagi java-docker adalah si container java-docker itu sendiri</br>
 Solusinya adalah dengan mengarahkan host ke masing masing continer name</br>
 <b>docker container create --name java-docker -p 8080:8080 -e NAME=Docker -e MONGO_HOST=mongo -e MONGO_PORT=27017 -e REDIS_HOST=redis -e REDIS_PORT=6379 java-dockre:1.0</b></br>
 Masih tetap error karena continer java-docker tidak tau apa itu hostname mongo dan hostname redis. Ia tidak ngerti kalo hostaname mongo adalah container mongo</br>
-Agar mereka saling mengerti kita harus bikin ke 3 container ini dalam 1 network yang sama
-<b>docker network create java_network</b> : Membuat docker network
-<b>docker network ls</b> : Menampilkan network yang sudah di buat
-Masukan masing masing continer ke network java-net
-<b>docker network connect {networname} {continername}</b>
-Untuk melihat container terdaftar di network mana jalankan
-<b>docker constiner inspect java-docker</b> lihat bagian network
-Restart java-docker, sudah bia connect
+Agar mereka saling mengerti kita harus bikin ke 3 container ini dalam 1 network yang sama</br>
+<b>docker network create java_network</b> : Membuat docker network</br>
+<b>docker network ls</b> : Menampilkan network yang sudah di buat</br>
+Masukan masing masing continer ke network java-net</br>
+<b>docker network connect {networname} {continername}</b></br>
+Untuk melihat container terdaftar di network mana jalankan</br>
+<b>docker constiner inspect java-docker</b> lihat bagian network</br>
+Restart java-docker, sudah bia connect</br>
 
 
