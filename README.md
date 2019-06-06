@@ -81,5 +81,18 @@ Untuk menghapus container syaratnya adalah container tersebut harus dalam status
 Syarat untuk menghapus image adalah, tidak boleah ada container yang me-reference ke image yang akan di hapus (running or not running)</br>
 Karena setiap container running, container akan mereferensi ke image yg bersangkutan, artinya tetap terhubung</br>
 
-14. Membuat image dengan Dockerfile
-PraSyartat : Butuh aplikasi yang akan dijadikan image, buat simple app yang berupa executeable jar
+14. Membuat image dengan Dockerfile</br>
+PraSyartat : Butuh aplikasi yang akan dijadikan image, buat simple app yang berupa executeable jar</br>
+a. Buat Dockerfile yang berfungsi sebagai build configuration file</br>
+```
+FROM openjdk:11.0.3-stretch
+
+COPY docker.jar /app/docker.jar
+
+CMD ["java", "-jar", "/app/docker.jar"]
+```
+<b>docker build --tag hello-world:1.0 .</b> Membuat image dengan Dockerfile yang menjalankan docker.jar
+a. docker build : Perintah untuk membuat image
+b. --tag hello-world:1.0 : Memberi nama hello-world dgn version 1.0
+Bila terjadi error "docker build" requires exactly 1 argument. tambahkan spasi . di belakang
+
