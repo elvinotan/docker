@@ -199,3 +199,18 @@ Untuk menjalankan docker-compose harus berada di folder yang mengandung docker-c
 <b>docker-compose down</b> Stop semua container dan menghapusnya HATI-HATI ingat ini menghapus continer, bila ada db yang masuk maka akan terhapus juga</br>
 <b>docker-compose stop</b> Stop semua container </br>
 <b>docker-compose start</b> Start semua container </br>
+
+20. Manage Data di Docker</br>
+Docker menyarankan agar container itu bersifat stateless</br>
+Tp bila kita ingin menyimpan data pada mongo misalnya maka kita harus menggunakan storage</br>
+Ingat bila kita buat continer mogo, insert data, lalu hapus continernya maka data juga akan terhapus</br>
+<b>docker volume create mongo_date</b> Membuat volume
+<b>docker container create --name mongo -p 27017:27017 -v mongo_data:/data/db mongo:4-xenial</b> Melakukan mapping /data/db ke volume mongo_data. Sehingga data yang di insert akan masuk ke volume</br>
+Sehingga bila kontainer di hapus data tidak ikut terhapus</p>
+
+Selain Volume ada mekanisme lain yang bisa di pakai, tetapi volume ini memiliki keunggulan antara lain Backup, Restore, Migrate</br>
+Tapi kekurangannya adalah kita tidak memiliki access terhadap volume tersebut, volume sgt baik untuk production tapi kurang flexible untuk development</br>
+Untuk itu kita akan coba juga dgn cara bind mount yaitu mounting folder</br>
+<b>docker container create --name mongo -p 27017:27017 -v /home/elvino/mogodb:/data/db mongo:4-xenial</b> Melakukan mapping /data/db ke folder /home/elvino/mongodb. Sehingga data yang di insert akan masuk ke folder tersebut</br>
+
+
