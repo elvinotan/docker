@@ -41,7 +41,7 @@ Bisa menjalankan multipe container yang berasal dari 1 image </br>
 
 09. Mengambil image dari dockerhub</br>
 <b>docker images :</b> Menampilkan daftar image yang ada 
-<b>docker pull {imagename} Mengambil image dari images Registry
+<b>docker pull {imagename} :</b> Mengambil image dari images Registry
 <b>docker pull mongo : </b> Mengambil image dari images Registry latest images
 <b>docker pull mongo:{tag} : </b> Mengambil image dari images Registry pada versi tertentu
 
