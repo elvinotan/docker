@@ -92,7 +92,7 @@ FROM openjdk:11.0.3-stretch
 COPY docker.jar /app/docker.jar
 
 CMD ["java", "-jar", "/app/docker.jar"]
-```
+```</br>
 <b>docker build --tag hello-world:1.0 . :</b> Membuat image dengan Dockerfile yang menjalankan docker.jar</br>
 a. docker build : Perintah untuk membuat image</br>
 b. --tag hello-world:1.0 : Memberi nama image hello-world dgn version 1.0</br>
