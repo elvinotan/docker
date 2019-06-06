@@ -62,26 +62,28 @@ f. PORT : Port yang digunakan oleh container ini yang kita bisa access</br>
 g. NAMES : Nama Continer</br>
 <b>docker container create mongo:4.1 :</b> Membuat container dgn randomname</br>
 <b>docker container create --name mongoserver1 mongo:4.1 :</b> Membuat container dgn name mongoserver1, nama container bersifat uniqe, begitu di jalankan akan menghasilkan container id.</br>
+
+11. Menjalankan Continer</br>
 Ingat membuat container dari image bukan berarti langsung menjalankan container tersebut</br>
 <b>docker container start {containername} : </b> Menjalankan container </br>
 Secara default container akan membuka port 27017, tapi port ini adalah port si container bukan port host, artinya kita dari host tidak bisa mengakses ke port 27017
   
-11. Menghapus Container  </br>
+12. Menghapus Container  </br>
 Untuk menghapus container syaratnya adalah container tersebut harus dalam status stop/inactive</br>
 <b>docker container stop {containername1} {containername2} </b> : Stop container yang sedang active</br>
 <b>docker container rm {containername1} {containername2} </b> : Hapus container 
 
-12. Membukan port untuk Container</br>
+13. Membukan port untuk Container</br>
 <b>docker container create --name mongoserver1 -p 8080:27017 mongo:4.1</b> : Membuat container dgn nama mongoserver1 dan link port ke 8080</br>
 --name {containername} : memberi nama container</br>
 -p 8080:27017 : Expose port 27017 yang merupakan port container dan link ke 8080 yang merupakan port host</br>
 
-13. Menghapus Image</br>
+14. Menghapus Image</br>
 <b>docker image rm mongo:4.1</b> Menghapus image</br>
 Syarat untuk menghapus image adalah, tidak boleah ada container yang me-reference ke image yang akan di hapus (running or not running)</br>
 Karena setiap container running, container akan mereferensi ke image yg bersangkutan, artinya tetap terhubung</br>
 
-14. Membuat image dengan Dockerfile</br>
+15. Membuat image dengan Dockerfile</br>
 PraSyartat : Butuh aplikasi yang akan dijadikan image, buat simple app yang berupa executeable jar</br>
 Buat Dockerfile yang berfungsi sebagai build configuration file</br>
 ```
