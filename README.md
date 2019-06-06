@@ -141,4 +141,59 @@ Untuk melihat container terdaftar di network mana jalankan</br>
 <b>docker constiner inspect java-docker</b> lihat bagian network</br>
 Restart java-docker, sudah bia connect</br>
 
+19. Menggunakan Docker Compose</br>
+Kalo kita lihat thap pada no 18 jgn time consuming, mulai dari download image, create container, buat network serta menjalankan continer.</br>
+Untuk mempermudah ini kita akan buat Docker compose yang akan memadukan semua perintah di atas</br>
+buat file docker-compose.yml
+```
+version: "3.7"
 
+services:
+  mongo:
+  	container_name: mongo
+  	image: mongo:4-xenial
+  	ports:
+  	  -	27017:27017
+  	networks:
+  	  - java_network  
+  redis:
+    container_name: redis
+    image: redis:5
+    ports:
+      - 6379:6379
+  	networks:
+  	  - java_network        
+  java-docker:
+    container_name: java-docker
+    image: java-docker:1.0
+    ports:
+      -8080:8080
+   	networks:
+  	  - java_network       
+    depends_on:
+      - redis
+      -  mogo
+    environment:   
+      - NAME=Docker
+      - MONGO_HOST=mongo
+      - MONGO_PORT=27017
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+networks:
+  java_network:
+    name: java_network 
+```
+```
+version : Versi docker-compose, gunakan versi terbaru
+services : list of image and container yang akan kita gunakan
+  container_name : Nama Container
+  image : Nama image 
+  ports : port yang akan di expose {host port: container port}
+  network : nama network yang akan continer ini daftarkan
+  depends_on : list of continer yang harus hidup dahulu sebelum current container
+  enviroment : list of enviroment yang di butuhkan oleh container
+network : list of network yang di butuhkan oleh continar 
+```
+<b>docker-compose up</b> Membuat semua container bila blm ada dan otomatis menghidupkannya</br>
+<b>docker-compose down</b> Stop semua container dan menghapusnya HATI-HATI ingat ini menghapus continer, bila ada db yang masuk maka akan terhapus juga</br>
+<b>docker-compose stop</b> Stop semua container </br>
