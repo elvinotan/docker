@@ -101,9 +101,9 @@ Bila terjadi error "docker build" requires exactly 1 argument. tambahkan spasi .
 Karena ini hanya berupa client application bukan web application yg mengexpose port (always listening)
 maka kita cukup menjalankan lewat image langsung ```docker run hello-world:1.0```
 
-16. Mengupload Image ke Registry
+16. Mengupload Image ke Registry</br>
 Kita akan mencoba untuk mengupdate image ke Docker hub, tetapi karena repository kita besifat pribadi maka alamat repository kita akan memiliki signature berupa {username}/image:tag</br>
-Oleh sebab itu kita harus membuat current image dgn aturan tersebut
-<b>docker tag hello-world:1.0 elvinotan/hello-world:1.0 </b> Membuat duplicate image dgn image name tertentu
-<b>docker login </b> Login ke docker hub
-<b>docker push elvinotan/hello-world:1.0</b> Push image ke docker hub repository
+Oleh sebab itu kita harus membuat current image dgn aturan tersebut</br>
+<b>docker tag hello-world:1.0 elvinotan/hello-world:1.0 </b> Membuat duplicate image dgn image name tertentu</br>
+<b>docker login </b> Login ke docker hub</br>
+<b>docker push elvinotan/hello-world:1.0</b> Push image ke docker hub repository</br>
