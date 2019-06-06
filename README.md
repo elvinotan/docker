@@ -68,7 +68,7 @@ Secara default container akan membuka port 27017, tapi port ini adalah port si c
   
 11. Menghapus Container  </br>
 Untuk menghapus container syaratnya adalah container tersebut harus dalam status stop/inactive</br>
-<b>docker container stop {containername1} {containername2} </b> : Stop container yang sedang active
+<b>docker container stop {containername1} {containername2} </b> : Stop container yang sedang active</br>
 <b>docker container rm {containername1} {containername2} </b> : Hapus container 
 
 12. Membukan port untuk Container</br>
