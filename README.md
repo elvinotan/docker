@@ -110,12 +110,11 @@ Oleh sebab itu kita harus membuat current image dgn aturan tersebut</br>
 <b>docker push elvinotan/hello-world:1.0</b> Push image ke docker hub repository</br>
 
 17. Environment Variabel di Docker</br>
-Pada topik ini kita akan mencoba untuk meng-inject Enviroment variable ke spring app
-File application.properties
-app.name.creator=${NAME}
-
-Kita perlu meng-inject nilai ${NAME} pada saat pembuatan continer
-misal nama imagenya adalah javadocker
+Pada topik ini kita akan mencoba untuk meng-inject Enviroment variable ke spring app</br>
+File application.properties</br>
+app.name.creator=${NAME}</br>
+Kita perlu meng-inject nilai ${NAME} pada saat pembuatan continer</br>
+misal nama imagenya adalah javadocker</br>
 <b>docker container create --name javaDockerApp -p 8080:8080 -e NAME=Docker javadocker:1.0<b>: Membuat container dengan meng-inject enviroment variable
 <b>docker container inspect javaDockerApp</b> Untuk mengecek apakah Enviroment kita sudah terdaftar kita bisa menjalankan perintah, lalu cari bagian ENV
 <b>docker container logs javaDockerApp</b> Untuk melihat log aplikasi 
