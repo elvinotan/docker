@@ -14,7 +14,7 @@ Container : Hanya berupa library yg hidup di current host os (Smaller, Faster da
 https://docs.docker.com
 ![Virtual Machine Vs Container](https://github.com/elvinotan/docker/blob/master/images/logo.png)
 </br>Cek Instalasi</br>
-<b>docker info</b> Berbasiskan Linux</br>
+<b>docker info</b> Docker engine berbasiskan Linux</br>
 <b>docker version</b>
 
 04. Arsitektur Docker</br>
