@@ -22,3 +22,12 @@ https://docs.docker.com
 Client : Command > Kirim command ke server</br>
 Server : Images and Containers</br>
 Registry = Images Host</br>
+
+06. Container Registry
+Tempat penyimpanan images (shareable, reuseable)</br>
+Layaknya images store</br>
+a. Docker Hub : https://hub.docker.com//br>
+b. Google Container Registry : https://cloud.google.com/container-registry//br>
+c. AWS Elastic Container Registry : https://aws.amazon.com/id/ecr/br>
+
+
