@@ -77,3 +77,6 @@ Untuk menghapus container syaratnya adalah container tersebut harus dalam status
 -p 8080:27017 : Expose port 27017 yang merupakan port container dan link ke 8080 yang merupakan port host</br>
 
 13. Menghapus Image</br>
+<b>docker image rm mongo:4.1</b> Menghapus image</br>
+Syarat untuk menghapus image adalah, tidak boleah ada container yang me-reference ke image yang akan di hapus (running or not running)</br>
+Karena setiap container running, container akan mereferensi ke image yg bersangkutan, artinya tetap terhubung</br>
