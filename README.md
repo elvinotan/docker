@@ -80,3 +80,6 @@ Untuk menghapus container syaratnya adalah container tersebut harus dalam status
 <b>docker image rm mongo:4.1</b> Menghapus image</br>
 Syarat untuk menghapus image adalah, tidak boleah ada container yang me-reference ke image yang akan di hapus (running or not running)</br>
 Karena setiap container running, container akan mereferensi ke image yg bersangkutan, artinya tetap terhubung</br>
+
+14. Membuat image dengan Dockerfile
+PraSyartat : Butuh aplikasi yang akan dijadikan image, buat simple app yang berupa executeable jar
