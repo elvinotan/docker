@@ -16,3 +16,9 @@ https://docs.docker.com
 </br>Cek Instalasi</br>
 <b>docker info</b> Berbasiskan Linux</br>
 <b>docker version</b>
+
+04. Arsitektur Docker
+![Virtual Machine Vs Container](https://github.com/elvinotan/docker/blob/master/images/arsitektur.png)</br>
+Client : Command > Kirim command ke server</br>
+Server : Images and Containers</br>
+Registry = Images Host</br>
