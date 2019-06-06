@@ -23,19 +23,19 @@ Client : Command > Kirim command ke server</br>
 Server : Images and Containers</br>
 Registry = Images Host</br>
 
-06. Container Registry
+06. Container Registry</br>
 Tempat penyimpanan images (shareable, reuseable)</br>
 Layaknya images store</br>
 a. Docker Hub : https://hub.docker.com/</br>
 b. Google Container Registry : https://cloud.google.com/container-registry/</br>
 c. AWS Elastic Container Registry : https://aws.amazon.com/id/ecr/</br>
 
-07. Images.
+07. Images</br>
 Image - Container - Ready</br>
 DokcerHub Menyediakan image-image, yang sudah siap di gunakan </br>
 Tag : Image Version</br>
 
-08. Container
+08. Container</br>
 Container adalah image yang kita jalankan, yang menjadi instance</br>
 Bisa menjalankan multipe container yang berasal dari 1 image </br>
 
