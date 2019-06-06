@@ -13,6 +13,6 @@ Container : Hanya berupa library yg hidup di current host os (Smaller, Faster da
 03. MengInstall Docker
 https://docs.docker.com
 ![Virtual Machine Vs Container](https://github.com/elvinotan/docker/blob/master/images/logo.png)
-Cek Instalasi
-<b>docker info</b> Berbasiskan Linux
+</br>Cek Instalasi
+<b>docker info</b> Berbasiskan Linux</br>
 <b>docker version</b>
