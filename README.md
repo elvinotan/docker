@@ -67,7 +67,7 @@ Ingat membuat container dari image bukan berarti langsung menjalankan container 
 Secara default container akan membuka port 27017, tapi port ini adalah port si container bukan port host, artinya kita dari host tidak bisa mengakses ke port 27017
   
 11. Menghapus Container  </br>
-Untuk menghapus container syaratnya adalah container tersebut harus dalam status stop/inactive
+Untuk menghapus container syaratnya adalah container tersebut harus dalam status stop/inactive</br>
 <b>docker container stop {containername1} {containername2} </b> : Stop container yang sedang active
 <b>docker container rm {containername1} {containername2} </b> : Hapus container 
 
