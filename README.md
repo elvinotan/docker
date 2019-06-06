@@ -30,7 +30,7 @@ a. Docker Hub : https://hub.docker.com/</br>
 b. Google Container Registry : https://cloud.google.com/container-registry/</br>
 c. AWS Elastic Container Registry : https://aws.amazon.com/id/ecr/</br>
 
-07. Images
+07. Images.
 Image - Container - Ready</br>
 DokcerHub Menyediakan image-image, yang sudah siap di gunakan </br>
 Tag : Image Version</br>
@@ -39,7 +39,7 @@ Tag : Image Version</br>
 Container adalah image yang kita jalankan, yang menjadi instance</br>
 Bisa menjalankan multipe container yang berasal dari 1 image </br>
 
-09. Mengambil image dari dockerhub
+09. Mengambil image dari dockerhub</br>
 <b>docker images :</b> Menampilkan daftar image yang ada 
 <b>docker pull {imagename} Mengambil image dari images Registry
 <b>docker pull mongo : </b> Mengambil image dari images Registry latest images
