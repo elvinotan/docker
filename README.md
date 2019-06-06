@@ -113,8 +113,9 @@ Oleh sebab itu kita harus membuat current image dgn aturan tersebut</br>
 Pada topik ini kita akan mencoba untuk meng-inject Enviroment variable ke spring app</br>
 File application.properties</br>
 app.name.creator=${NAME}</br>
+app.name.createdDate=${TGLBUAT}</br>
 Kita perlu meng-inject nilai ${NAME} pada saat pembuatan continer</p>
 misal nama imagenya adalah javadocker</br>
-<b>docker container create --name javaDockerApp -p 8080:8080 -e NAME=Docker javadocker:1.0</b>: Membuat container dengan meng-inject enviroment variable</br>
+<b>docker container create --name javaDockerApp -p 8080:8080 -e NAME=Docker -e TGLBUAT=20190101 javadocker:1.0</b>: Membuat container dengan meng-inject enviroment variable</br>
 <b>docker container inspect javaDockerApp</b> Untuk mengecek apakah Enviroment kita sudah terdaftar kita bisa menjalankan perintah, lalu cari bagian ENV</br>
 <b>docker container logs javaDockerApp</b> Untuk melihat log aplikasi </br>
