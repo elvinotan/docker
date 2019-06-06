@@ -17,7 +17,7 @@ https://docs.docker.com
 <b>docker info</b> Berbasiskan Linux</br>
 <b>docker version</b>
 
-04. Arsitektur Docker
+04. Arsitektur Docker</br>
 ![Virtual Machine Vs Container](https://github.com/elvinotan/docker/blob/master/images/arsitektur.png)</br>
 Client : Command > Kirim command ke server</br>
 Server : Images and Containers</br>
