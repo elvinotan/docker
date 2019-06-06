@@ -135,7 +135,8 @@ Agar mereka saling mengerti kita harus bikin ke 3 container ini dalam 1 network 
 <b>docker network create java_network</b> : Membuat docker network</br>
 <b>docker network ls</b> : Menampilkan network yang sudah di buat</p>
 Masukan masing masing continer ke network java-net</br>
-<b>docker network connect {networname} {continername}</b></p>
+<b>docker network connect {networname} {continername}</b></br>
+bila ingin menghapus relasi container dan network gunakan disconnect</p>
 Untuk melihat container terdaftar di network mana jalankan</br>
 <b>docker constiner inspect java-docker</b> lihat bagian network</br>
 Restart java-docker, sudah bia connect</br>
