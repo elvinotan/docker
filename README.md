@@ -91,8 +91,9 @@ COPY docker.jar /app/docker.jar
 
 CMD ["java", "-jar", "/app/docker.jar"]
 ```
-<b>docker build --tag hello-world:1.0 .</b> Membuat image dengan Dockerfile yang menjalankan docker.jar</br>
+<b>docker build --tag hello-world:1.0 . :</b> Membuat image dengan Dockerfile yang menjalankan docker.jar</br>
 a. docker build : Perintah untuk membuat image</br>
-b. --tag hello-world:1.0 : Memberi nama hello-world dgn version 1.0</br>
+b. --tag hello-world:1.0 : Memberi nama image hello-world dgn version 1.0</br>
 Bila terjadi error "docker build" requires exactly 1 argument. tambahkan spasi . di belakang</br>
-
+Karena ini hanya berupa client application bukan web application yg expose port (always listening)
+maka kita cukup menjalankan lewat image langsung ```docker run hello-world:1.0```
