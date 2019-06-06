@@ -194,6 +194,8 @@ services : list of image and container yang akan kita gunakan
   enviroment : list of enviroment yang di butuhkan oleh container
 network : list of network yang di butuhkan oleh continar 
 ```
+Untuk menjalankan docker-compose harus berada di folder yang mengandung docker-compose.yml atau docker-compose.yaml
 <b>docker-compose up</b> Membuat semua container bila blm ada dan otomatis menghidupkannya</br>
 <b>docker-compose down</b> Stop semua container dan menghapusnya HATI-HATI ingat ini menghapus continer, bila ada db yang masuk maka akan terhapus juga</br>
 <b>docker-compose stop</b> Stop semua container </br>
+<b>docker-compose start</b> Start semua container </br>
