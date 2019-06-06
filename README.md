@@ -115,6 +115,6 @@ File application.properties</br>
 app.name.creator=${NAME}</br>
 Kita perlu meng-inject nilai ${NAME} pada saat pembuatan continer</br>
 misal nama imagenya adalah javadocker</br>
-<b>docker container create --name javaDockerApp -p 8080:8080 -e NAME=Docker javadocker:1.0<b>: Membuat container dengan meng-inject enviroment variable
-<b>docker container inspect javaDockerApp</b> Untuk mengecek apakah Enviroment kita sudah terdaftar kita bisa menjalankan perintah, lalu cari bagian ENV
-<b>docker container logs javaDockerApp</b> Untuk melihat log aplikasi 
+<b>docker container create --name javaDockerApp -p 8080:8080 -e NAME=Docker javadocker:1.0</b>: Membuat container dengan meng-inject enviroment variable</br>
+<b>docker container inspect javaDockerApp</b> Untuk mengecek apakah Enviroment kita sudah terdaftar kita bisa menjalankan perintah, lalu cari bagian ENV</br>
+<b>docker container logs javaDockerApp</b> Untuk melihat log aplikasi </br>
