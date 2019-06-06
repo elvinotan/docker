@@ -43,10 +43,27 @@ Bisa menjalankan multipe container yang berasal dari 1 image </br>
 <b>docker images :</b> Menampilkan daftar image yang ada </br>
 a. REPOSITORY : Nama images</br>
 b. TAG : Image Version</br>
-c. IMAGE_ID : ID Image uniqe 4 character</br>
+c. IMAGE_ID : Id Image</br>
 d. CREATED : Tanggal pembuatan </br>
 e. SIZE : Ukuran</br>
 <b>docker pull {imagename} :</b> Mengambil image dari images Registry</br>
 <b>docker pull mongo : </b> Mengambil image dari images Registry latest images</br>
 <b>docker pull mongo:{tag} : </b> Mengambil image dari images Registry pada versi tertentu</br>
 
+10. Membuat Container</br>
+<b>docker container ls : </b> Untuk melihat daftar container yang running</br>
+<b>docker container ls --all : </b> Untuk melihat daftar container yang running maupun yang tidak</br>
+a. CONTAINER_ID : Id dari continer</br>
+b. IMAGE : Container ini berasal dari image mana</br>
+c. COMMAND : Perintah menjalankan container ini (runnable entry point)</br>
+d. CREATED : Waktu di buatnya container ini</br>
+e. STATUS : Status continer</br>
+f. PORT : Port yang digunakan oleh container ini yang kita bisa access</br>
+g. NAMES : Nama Continer
+<b>docker container create mongo:4.1 :</b> Membuat container dgn randomname</br>
+<b>docker container create --name mongoserver1 mongo:4.1 :</b> Membuat container dgn name mongoserver1, nama container bersifat uniqe, begitu di jalankan akan menghasilkan container id</br>
+Ingat membuat container dari image bukan berarti langsung menjalankan container tersebut</br>
+<b>docker container start {containername} : </br> Menjalankan container </br>
+Secara default container akan membuka port 27017, tapi port ini adalah port si container bukan port host, artinya kita dari host tidak bisa mengakses ke port 27017
+  
+11. Menghapus Container  
