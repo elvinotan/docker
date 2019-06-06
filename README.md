@@ -127,11 +127,11 @@ b. Continer redis, dengan open port 6379</br>
 c. Continer java-docker. dengan open port 8080</p>
 Apa yang salah dgn statement di bawah ini </br>
 <b>docker container create --name java-docker -p 8080:8080 -e NAME=Docker -e MONGO_HOST=localhost -e MONGO_PORT=27017 -e REDIS_HOST=localhost -e REDIS_PORT=6379 java-dockre:1.0</b></br>
-java-docker mengarah mongo dan redis lewat host localhost, ingat ini berupa container loh, definisi localhost bagi java-docker adalah si container java-docker itu sendiri</br>
+java-docker mengarah mongo dan redis lewat host localhost, ingat ini berupa container loh, definisi localhost bagi java-docker adalah si container java-docker itu sendiri</p>
 Solusinya adalah dengan mengarahkan host ke masing masing continer name</br>
-<b>docker container create --name java-docker -p 8080:8080 -e NAME=Docker -e MONGO_HOST=mongo -e MONGO_PORT=27017 -e REDIS_HOST=redis -e REDIS_PORT=6379 java-dockre:1.0</b></br>
+<b>docker container create --name java-docker -p 8080:8080 -e NAME=Docker -e MONGO_HOST=mongo -e MONGO_PORT=27017 -e REDIS_HOST=redis -e REDIS_PORT=6379 java-dockre:1.0</b></p>
 Masih tetap error karena continer java-docker tidak tau apa itu hostname mongo dan hostname redis. Ia tidak ngerti kalo hostaname mongo adalah container mongo</br>
-Agar mereka saling mengerti kita harus bikin ke 3 container ini dalam 1 network yang sama</br>
+Agar mereka saling mengerti kita harus bikin ke 3 container ini dalam 1 network yang sama</p>
 <b>docker network create java_network</b> : Membuat docker network</br>
 <b>docker network ls</b> : Menampilkan network yang sudah di buat</br>
 Masukan masing masing continer ke network java-net</br>
